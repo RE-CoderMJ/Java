@@ -1,5 +1,7 @@
 package com.kh.chap02_inherit.run;
 
+import java.util.ArrayList;
+
 import com.kh.chap02_inherit.model.vo.Airplane;
 import com.kh.chap02_inherit.model.vo.Car;
 import com.kh.chap02_inherit.model.vo.Ship;
@@ -10,9 +12,7 @@ public class InheritRun {
 	public static void main(String[] args) {
 
 		Car c = new Car("벤틀리", 12.5, "세단", 4);
-		
 		Ship s = new Ship("낚시배", 3, "어선", 1);
-		
 		Airplane a = new Airplane("비행기", 0.01, "제트기", 10, 4);
 		
 		System.out.println(c.information());
@@ -22,6 +22,20 @@ public class InheritRun {
 		c.howToMove();
 		s.howToMove();
 		a.howToMove();
+		
+		System.out.println("=============================");
+		
+		ArrayList<Vehicle> list = new ArrayList<>();
+		
+		list.add(new Car("벤틀리", 12.5, "세단", 4));
+		list.add(new Ship("낚시배", 3, "어선", 1));
+		list.add(new Airplane("비행기", 0.01, "제트기", 10, 4));
+		
+		for(Vehicle v : list) {
+			System.out.println(v.information());
+		}
+				
+		System.out.println("=============================");
 
 		/*
 		 * * 상속의 장점
