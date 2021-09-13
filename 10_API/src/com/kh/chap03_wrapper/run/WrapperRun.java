@@ -76,8 +76,10 @@ public class WrapperRun {
 		// 해당 Wrapper클래스.parseXXX() 사용   => 파싱한다
 		int i = Integer.parseInt(str1);
 		double d = Double.parseDouble(str2);
+		double d1 = Double.parseDouble("13.45");
 		
 		System.out.println(i + d);
+		System.out.println(d1);
 		
 		// 2. 기본자료형 --> String
 		//      10    -->  "10"
